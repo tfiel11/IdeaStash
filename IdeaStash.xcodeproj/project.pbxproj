@@ -1,0 +1,964 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D1B7F86A2DE91F1800CD35C2 /* IdeaStash Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D1B7F8692DE91F1800CD35C2 /* IdeaStash Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1B7F8542DE91F1800CD35C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B7F83E2DE91F1700CD35C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B7F8452DE91F1700CD35C2;
+			remoteInfo = IdeaStash;
+		};
+		D1B7F85E2DE91F1800CD35C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B7F83E2DE91F1700CD35C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B7F8452DE91F1700CD35C2;
+			remoteInfo = IdeaStash;
+		};
+		D1B7F86B2DE91F1800CD35C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B7F83E2DE91F1700CD35C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B7F8682DE91F1800CD35C2;
+			remoteInfo = "IdeaStash Watch App";
+		};
+		D1B7F8792DE91F1900CD35C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B7F83E2DE91F1700CD35C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B7F8682DE91F1800CD35C2;
+			remoteInfo = "IdeaStash Watch App";
+		};
+		D1B7F8832DE91F1900CD35C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B7F83E2DE91F1700CD35C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1B7F8682DE91F1800CD35C2;
+			remoteInfo = "IdeaStash Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D1B7F88F2DE91F1900CD35C2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D1B7F86A2DE91F1800CD35C2 /* IdeaStash Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D1B7F8462DE91F1700CD35C2 /* IdeaStash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdeaStash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B7F8532DE91F1800CD35C2 /* IdeaStashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdeaStashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B7F85D2DE91F1800CD35C2 /* IdeaStashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdeaStashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B7F8692DE91F1800CD35C2 /* IdeaStash Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IdeaStash Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B7F8782DE91F1900CD35C2 /* IdeaStash Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IdeaStash Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B7F8822DE91F1900CD35C2 /* IdeaStash Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IdeaStash Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D1B7F8482DE91F1700CD35C2 /* IdeaStash */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = IdeaStash;
+			sourceTree = "<group>";
+		};
+		D1B7F8562DE91F1800CD35C2 /* IdeaStashTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = IdeaStashTests;
+			sourceTree = "<group>";
+		};
+		D1B7F8602DE91F1800CD35C2 /* IdeaStashUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = IdeaStashUITests;
+			sourceTree = "<group>";
+		};
+		D1B7F86D2DE91F1800CD35C2 /* IdeaStash Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "IdeaStash Watch App";
+			sourceTree = "<group>";
+		};
+		D1B7F87B2DE91F1900CD35C2 /* IdeaStash Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "IdeaStash Watch AppTests";
+			sourceTree = "<group>";
+		};
+		D1B7F8852DE91F1900CD35C2 /* IdeaStash Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "IdeaStash Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1B7F8432DE91F1700CD35C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F8502DE91F1800CD35C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F85A2DE91F1800CD35C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F8662DE91F1800CD35C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F8752DE91F1900CD35C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F87F2DE91F1900CD35C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1B7F83D2DE91F1700CD35C2 = {
+			isa = PBXGroup;
+			children = (
+				D1B7F8482DE91F1700CD35C2 /* IdeaStash */,
+				D1B7F8562DE91F1800CD35C2 /* IdeaStashTests */,
+				D1B7F8602DE91F1800CD35C2 /* IdeaStashUITests */,
+				D1B7F86D2DE91F1800CD35C2 /* IdeaStash Watch App */,
+				D1B7F87B2DE91F1900CD35C2 /* IdeaStash Watch AppTests */,
+				D1B7F8852DE91F1900CD35C2 /* IdeaStash Watch AppUITests */,
+				D1B7F8472DE91F1700CD35C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1B7F8472DE91F1700CD35C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1B7F8462DE91F1700CD35C2 /* IdeaStash.app */,
+				D1B7F8532DE91F1800CD35C2 /* IdeaStashTests.xctest */,
+				D1B7F85D2DE91F1800CD35C2 /* IdeaStashUITests.xctest */,
+				D1B7F8692DE91F1800CD35C2 /* IdeaStash Watch App.app */,
+				D1B7F8782DE91F1900CD35C2 /* IdeaStash Watch AppTests.xctest */,
+				D1B7F8822DE91F1900CD35C2 /* IdeaStash Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1B7F8452DE91F1700CD35C2 /* IdeaStash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B7F8902DE91F1900CD35C2 /* Build configuration list for PBXNativeTarget "IdeaStash" */;
+			buildPhases = (
+				D1B7F8422DE91F1700CD35C2 /* Sources */,
+				D1B7F8432DE91F1700CD35C2 /* Frameworks */,
+				D1B7F8442DE91F1700CD35C2 /* Resources */,
+				D1B7F88F2DE91F1900CD35C2 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1B7F86C2DE91F1800CD35C2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D1B7F8482DE91F1700CD35C2 /* IdeaStash */,
+			);
+			name = IdeaStash;
+			packageProductDependencies = (
+			);
+			productName = IdeaStash;
+			productReference = D1B7F8462DE91F1700CD35C2 /* IdeaStash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D1B7F8522DE91F1800CD35C2 /* IdeaStashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B7F8932DE91F1900CD35C2 /* Build configuration list for PBXNativeTarget "IdeaStashTests" */;
+			buildPhases = (
+				D1B7F84F2DE91F1800CD35C2 /* Sources */,
+				D1B7F8502DE91F1800CD35C2 /* Frameworks */,
+				D1B7F8512DE91F1800CD35C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1B7F8552DE91F1800CD35C2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D1B7F8562DE91F1800CD35C2 /* IdeaStashTests */,
+			);
+			name = IdeaStashTests;
+			packageProductDependencies = (
+			);
+			productName = IdeaStashTests;
+			productReference = D1B7F8532DE91F1800CD35C2 /* IdeaStashTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D1B7F85C2DE91F1800CD35C2 /* IdeaStashUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B7F8962DE91F1900CD35C2 /* Build configuration list for PBXNativeTarget "IdeaStashUITests" */;
+			buildPhases = (
+				D1B7F8592DE91F1800CD35C2 /* Sources */,
+				D1B7F85A2DE91F1800CD35C2 /* Frameworks */,
+				D1B7F85B2DE91F1800CD35C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1B7F85F2DE91F1800CD35C2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D1B7F8602DE91F1800CD35C2 /* IdeaStashUITests */,
+			);
+			name = IdeaStashUITests;
+			packageProductDependencies = (
+			);
+			productName = IdeaStashUITests;
+			productReference = D1B7F85D2DE91F1800CD35C2 /* IdeaStashUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D1B7F8682DE91F1800CD35C2 /* IdeaStash Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B7F88C2DE91F1900CD35C2 /* Build configuration list for PBXNativeTarget "IdeaStash Watch App" */;
+			buildPhases = (
+				D1B7F8652DE91F1800CD35C2 /* Sources */,
+				D1B7F8662DE91F1800CD35C2 /* Frameworks */,
+				D1B7F8672DE91F1800CD35C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D1B7F86D2DE91F1800CD35C2 /* IdeaStash Watch App */,
+			);
+			name = "IdeaStash Watch App";
+			packageProductDependencies = (
+			);
+			productName = "IdeaStash Watch App";
+			productReference = D1B7F8692DE91F1800CD35C2 /* IdeaStash Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D1B7F8772DE91F1900CD35C2 /* IdeaStash Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B7F8992DE91F1900CD35C2 /* Build configuration list for PBXNativeTarget "IdeaStash Watch AppTests" */;
+			buildPhases = (
+				D1B7F8742DE91F1900CD35C2 /* Sources */,
+				D1B7F8752DE91F1900CD35C2 /* Frameworks */,
+				D1B7F8762DE91F1900CD35C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1B7F87A2DE91F1900CD35C2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D1B7F87B2DE91F1900CD35C2 /* IdeaStash Watch AppTests */,
+			);
+			name = "IdeaStash Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "IdeaStash Watch AppTests";
+			productReference = D1B7F8782DE91F1900CD35C2 /* IdeaStash Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D1B7F8812DE91F1900CD35C2 /* IdeaStash Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1B7F89C2DE91F1900CD35C2 /* Build configuration list for PBXNativeTarget "IdeaStash Watch AppUITests" */;
+			buildPhases = (
+				D1B7F87E2DE91F1900CD35C2 /* Sources */,
+				D1B7F87F2DE91F1900CD35C2 /* Frameworks */,
+				D1B7F8802DE91F1900CD35C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1B7F8842DE91F1900CD35C2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D1B7F8852DE91F1900CD35C2 /* IdeaStash Watch AppUITests */,
+			);
+			name = "IdeaStash Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "IdeaStash Watch AppUITests";
+			productReference = D1B7F8822DE91F1900CD35C2 /* IdeaStash Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1B7F83E2DE91F1700CD35C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					D1B7F8452DE91F1700CD35C2 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					D1B7F8522DE91F1800CD35C2 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = D1B7F8452DE91F1700CD35C2;
+					};
+					D1B7F85C2DE91F1800CD35C2 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = D1B7F8452DE91F1700CD35C2;
+					};
+					D1B7F8682DE91F1800CD35C2 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					D1B7F8772DE91F1900CD35C2 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = D1B7F8682DE91F1800CD35C2;
+					};
+					D1B7F8812DE91F1900CD35C2 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = D1B7F8682DE91F1800CD35C2;
+					};
+				};
+			};
+			buildConfigurationList = D1B7F8412DE91F1700CD35C2 /* Build configuration list for PBXProject "IdeaStash" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1B7F83D2DE91F1700CD35C2;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D1B7F8472DE91F1700CD35C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1B7F8452DE91F1700CD35C2 /* IdeaStash */,
+				D1B7F8522DE91F1800CD35C2 /* IdeaStashTests */,
+				D1B7F85C2DE91F1800CD35C2 /* IdeaStashUITests */,
+				D1B7F8682DE91F1800CD35C2 /* IdeaStash Watch App */,
+				D1B7F8772DE91F1900CD35C2 /* IdeaStash Watch AppTests */,
+				D1B7F8812DE91F1900CD35C2 /* IdeaStash Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1B7F8442DE91F1700CD35C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F8512DE91F1800CD35C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F85B2DE91F1800CD35C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F8672DE91F1800CD35C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F8762DE91F1900CD35C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F8802DE91F1900CD35C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1B7F8422DE91F1700CD35C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F84F2DE91F1800CD35C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F8592DE91F1800CD35C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F8652DE91F1800CD35C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F8742DE91F1900CD35C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1B7F87E2DE91F1900CD35C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1B7F8552DE91F1800CD35C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B7F8452DE91F1700CD35C2 /* IdeaStash */;
+			targetProxy = D1B7F8542DE91F1800CD35C2 /* PBXContainerItemProxy */;
+		};
+		D1B7F85F2DE91F1800CD35C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B7F8452DE91F1700CD35C2 /* IdeaStash */;
+			targetProxy = D1B7F85E2DE91F1800CD35C2 /* PBXContainerItemProxy */;
+		};
+		D1B7F86C2DE91F1800CD35C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B7F8682DE91F1800CD35C2 /* IdeaStash Watch App */;
+			targetProxy = D1B7F86B2DE91F1800CD35C2 /* PBXContainerItemProxy */;
+		};
+		D1B7F87A2DE91F1900CD35C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B7F8682DE91F1800CD35C2 /* IdeaStash Watch App */;
+			targetProxy = D1B7F8792DE91F1900CD35C2 /* PBXContainerItemProxy */;
+		};
+		D1B7F8842DE91F1900CD35C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1B7F8682DE91F1800CD35C2 /* IdeaStash Watch App */;
+			targetProxy = D1B7F8832DE91F1900CD35C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D1B7F88A2DE91F1900CD35C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D1B7F88B2DE91F1900CD35C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		D1B7F88D2DE91F1900CD35C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = IdeaStash;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tfiel11.IdeaStash;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfiel11.IdeaStash.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		D1B7F88E2DE91F1900CD35C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = IdeaStash;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tfiel11.IdeaStash;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfiel11.IdeaStash.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		D1B7F8912DE91F1900CD35C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = IdeaStash;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfiel11.IdeaStash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1B7F8922DE91F1900CD35C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = IdeaStash;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfiel11.IdeaStash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1B7F8942DE91F1900CD35C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfiel11.IdeaStashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IdeaStash.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IdeaStash";
+			};
+			name = Debug;
+		};
+		D1B7F8952DE91F1900CD35C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfiel11.IdeaStashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IdeaStash.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IdeaStash";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1B7F8972DE91F1900CD35C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfiel11.IdeaStashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IdeaStash;
+			};
+			name = Debug;
+		};
+		D1B7F8982DE91F1900CD35C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfiel11.IdeaStashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IdeaStash;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1B7F89A2DE91F1900CD35C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tfiel11.IdeaStash-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IdeaStash Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IdeaStash Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		D1B7F89B2DE91F1900CD35C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tfiel11.IdeaStash-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IdeaStash Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IdeaStash Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+		D1B7F89D2DE91F1900CD35C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tfiel11.IdeaStash-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "IdeaStash Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		D1B7F89E2DE91F1900CD35C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tfiel11.IdeaStash-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "IdeaStash Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1B7F8412DE91F1700CD35C2 /* Build configuration list for PBXProject "IdeaStash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B7F88A2DE91F1900CD35C2 /* Debug */,
+				D1B7F88B2DE91F1900CD35C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B7F88C2DE91F1900CD35C2 /* Build configuration list for PBXNativeTarget "IdeaStash Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B7F88D2DE91F1900CD35C2 /* Debug */,
+				D1B7F88E2DE91F1900CD35C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B7F8902DE91F1900CD35C2 /* Build configuration list for PBXNativeTarget "IdeaStash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B7F8912DE91F1900CD35C2 /* Debug */,
+				D1B7F8922DE91F1900CD35C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B7F8932DE91F1900CD35C2 /* Build configuration list for PBXNativeTarget "IdeaStashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B7F8942DE91F1900CD35C2 /* Debug */,
+				D1B7F8952DE91F1900CD35C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B7F8962DE91F1900CD35C2 /* Build configuration list for PBXNativeTarget "IdeaStashUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B7F8972DE91F1900CD35C2 /* Debug */,
+				D1B7F8982DE91F1900CD35C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B7F8992DE91F1900CD35C2 /* Build configuration list for PBXNativeTarget "IdeaStash Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B7F89A2DE91F1900CD35C2 /* Debug */,
+				D1B7F89B2DE91F1900CD35C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1B7F89C2DE91F1900CD35C2 /* Build configuration list for PBXNativeTarget "IdeaStash Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1B7F89D2DE91F1900CD35C2 /* Debug */,
+				D1B7F89E2DE91F1900CD35C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1B7F83E2DE91F1700CD35C2 /* Project object */;
+}
