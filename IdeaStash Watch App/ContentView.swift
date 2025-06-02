@@ -22,8 +22,8 @@ struct ContentView: View {
                     }
                     .frame(minHeight: WKInterfaceDevice.current().screenBounds.height - 40) // Account for smaller navigation
                     
-                    // Recent Ideas Section - Accessible via scroll
-                    if !viewModel.ideas.isEmpty {
+                    // Recent Ideas Section - Only show when not recording
+                    if viewModel.recordingState != .recording && !viewModel.ideas.isEmpty {
                         VStack(spacing: 16) {
                             // Visual separator
                             HStack {
@@ -45,14 +45,15 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationBarHidden(true)
-            .alert("Error", isPresented: .constant(viewModel.errorMessage != nil)) {
-                Button("OK") {
-                    viewModel.clearError()
-                }
-            } message: {
-                Text(viewModel.errorMessage ?? "")
+            .scrollDisabled(viewModel.recordingState == .recording) // Disable scrolling when recording
+            .navigationBarHidden(false) // Keep navigation bar visible for consistent layout
+        }
+        .alert("Error", isPresented: .constant(viewModel.errorMessage != nil)) {
+            Button("OK") {
+                viewModel.clearError()
             }
+        } message: {
+            Text(viewModel.errorMessage ?? "")
         }
     }
 }
@@ -105,28 +106,30 @@ struct RecordingButton: View {
                 }
             }
             
-            // Recording duration display
-            if viewModel.recordingState == .recording {
-                Text(viewModel.currentRecordingDuration.formattedDuration)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
-            
-            // Scroll hint - maintain consistent spacing
-            VStack(spacing: 4) {
-                if viewModel.recordingState == .idle && !viewModel.ideas.isEmpty {
+            // Fixed space for either timer or arrow - absolutely no movement
+            HStack {
+                Spacer()
+                if viewModel.recordingState == .recording {
+                    // Recording duration display
+                    Text(viewModel.currentRecordingDuration.formattedDuration)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                } else if viewModel.recordingState == .idle && !viewModel.ideas.isEmpty {
+                    // Scroll hint arrow
                     Image(systemName: "arrow.down")
                         .font(.caption)
                         .foregroundColor(.secondary)
                 } else {
-                    // Invisible placeholder to maintain layout consistency
-                    Image(systemName: "arrow.down")
+                    // Invisible placeholder to maintain consistent spacing
+                    Text("00:00")
                         .font(.caption)
                         .foregroundColor(.clear)
                 }
+                Spacer()
             }
-            .padding(.top, 8)
+            .frame(height: 16) // Fixed height that matches both text and arrow
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity) // Prevent any container shifts
     }
     
     private func startBreathingAnimation() {
