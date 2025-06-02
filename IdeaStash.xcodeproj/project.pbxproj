@@ -621,6 +621,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = IdeaStash;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone Needed to Record Idea";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tfiel11.IdeaStash;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -650,6 +651,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = IdeaStash;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone Needed to Record Idea";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tfiel11.IdeaStash;
 				LD_RUNPATH_SEARCH_PATHS = (

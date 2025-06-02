@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var dataProvider = DummyDataProvider()
+    @StateObject private var viewModel = IdeaStashViewModel()
     
     var body: some View {
         NavigationStack {
@@ -17,13 +17,13 @@ struct ContentView: View {
                     // Recording Section - Full Screen Priority
                     VStack {
                         Spacer()
-                        RecordingButton(dataProvider: dataProvider)
+                        RecordingButton(viewModel: viewModel)
                         Spacer()
                     }
                     .frame(minHeight: WKInterfaceDevice.current().screenBounds.height - 40) // Account for smaller navigation
                     
                     // Recent Ideas Section - Accessible via scroll
-                    if !dataProvider.ideas.isEmpty {
+                    if !viewModel.ideas.isEmpty {
                         VStack(spacing: 16) {
                             // Visual separator
                             HStack {
@@ -39,26 +39,33 @@ struct ContentView: View {
                             }
                             .padding(.horizontal)
                             
-                            RecentIdeasSection(ideas: Array(dataProvider.ideas.prefix(5)))
+                            RecentIdeasSection(ideas: Array(viewModel.ideas.prefix(5)), viewModel: viewModel)
                         }
                         .padding(.bottom, 20)
                     }
                 }
             }
             .navigationBarHidden(true)
+            .alert("Error", isPresented: .constant(viewModel.errorMessage != nil)) {
+                Button("OK") {
+                    viewModel.clearError()
+                }
+            } message: {
+                Text(viewModel.errorMessage ?? "")
+            }
         }
     }
 }
 
 // MARK: - Recording Button Component
 struct RecordingButton: View {
-    @ObservedObject var dataProvider: DummyDataProvider
+    @ObservedObject var viewModel: IdeaStashViewModel
     @State private var animationAmount: CGFloat = 1.0
     
     var body: some View {
         VStack(spacing: 20) {
             // Status Text - Always show, changes based on state
-            Text(statusText)
+            Text(viewModel.statusText)
                 .font(.headline)
                 .foregroundColor(.primary)
                 .multilineTextAlignment(.center)
@@ -67,21 +74,21 @@ struct RecordingButton: View {
             Button(action: {
                 // Haptic feedback
                 WKInterfaceDevice.current().play(.start)
-                dataProvider.toggleRecording()
+                viewModel.toggleRecording()
             }) {
                 ZStack {
                     Circle()
-                        .fill(buttonBackgroundColor)
+                        .fill(viewModel.buttonBackgroundColor)
                         .frame(width: 100, height: 100)
                     
-                    Image(systemName: buttonIcon)
+                    Image(systemName: viewModel.buttonIcon)
                         .font(.system(size: 40, weight: .medium))
-                        .foregroundColor(buttonForegroundColor)
+                        .foregroundColor(.white)
                 }
             }
             .buttonStyle(PlainButtonStyle())
             .scaleEffect(animationAmount)
-            .onChange(of: dataProvider.recordingState) { oldValue, newValue in
+            .onChange(of: viewModel.recordingState) { oldValue, newValue in
                 // Handle animation based on recording state
                 switch newValue {
                 case .recording:
@@ -98,9 +105,16 @@ struct RecordingButton: View {
                 }
             }
             
+            // Recording duration display
+            if viewModel.recordingState == .recording {
+                Text(viewModel.currentRecordingDuration.formattedDuration)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+            
             // Scroll hint - maintain consistent spacing
             VStack(spacing: 4) {
-                if dataProvider.recordingState == .idle && !dataProvider.ideas.isEmpty {
+                if viewModel.recordingState == .idle && !viewModel.ideas.isEmpty {
                     Image(systemName: "arrow.down")
                         .font(.caption)
                         .foregroundColor(.secondary)
@@ -126,50 +140,12 @@ struct RecordingButton: View {
             animationAmount = 1.0
         }
     }
-    
-    private var buttonBackgroundColor: Color {
-        switch dataProvider.recordingState {
-        case .idle, .completed:
-            return Color(red: 216/255, green: 211/255, blue: 191/255) // #D8D3BF - Original beige
-        case .recording:
-            return Color(red: 212/255, green: 165/255, blue: 165/255) // #D4A5A5 - Soft coral red
-        case .processing:
-            return Color(red: 212/255, green: 200/255, blue: 154/255) // #D4C89A - Warm amber
-        }
-    }
-    
-    private var buttonForegroundColor: Color {
-        .white
-    }
-    
-    private var buttonIcon: String {
-        switch dataProvider.recordingState {
-        case .idle, .completed:
-            return "mic.fill"
-        case .recording:
-            return "stop.fill"
-        case .processing:
-            return "ellipsis"
-        }
-    }
-    
-    private var statusText: String {
-        switch dataProvider.recordingState {
-        case .idle:
-            return "Tap to Stash Idea"
-        case .recording:
-            return "Stashing Idea"
-        case .processing:
-            return "Processing..."
-        case .completed:
-            return "Saved!"
-        }
-    }
 }
 
 // MARK: - Recent Ideas Section Component
 struct RecentIdeasSection: View {
     let ideas: [Idea]
+    let viewModel: IdeaStashViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -184,8 +160,10 @@ struct RecentIdeasSection: View {
             
             // Ideas List
             ForEach(ideas) { idea in
-                RecentIdeaRow(idea: idea)
-                    .padding(.horizontal)
+                RecentIdeaRow(idea: idea, onDelete: {
+                    viewModel.deleteIdea(idea)
+                })
+                .padding(.horizontal)
             }
         }
     }
@@ -194,6 +172,7 @@ struct RecentIdeasSection: View {
 // MARK: - Recent Idea Row Component
 struct RecentIdeaRow: View {
     let idea: Idea
+    let onDelete: () -> Void
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -229,6 +208,11 @@ struct RecentIdeaRow: View {
         }
         .padding(12)
         .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 10))
+        .contextMenu {
+            Button("Delete", role: .destructive) {
+                onDelete()
+            }
+        }
     }
 }
 
