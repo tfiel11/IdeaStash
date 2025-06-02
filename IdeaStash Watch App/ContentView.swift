@@ -48,6 +48,12 @@ struct ContentView: View {
             .scrollDisabled(viewModel.recordingState == .recording) // Disable scrolling when recording
             .navigationBarHidden(false) // Keep navigation bar visible for consistent layout
         }
+        .onReceive(NotificationCenter.default.publisher(for: .startRecordingFromComplication)) { _ in
+            // Handle complication tap - start recording if not already recording
+            if viewModel.recordingState == .idle {
+                viewModel.toggleRecording()
+            }
+        }
         .alert("Error", isPresented: .constant(viewModel.errorMessage != nil)) {
             Button("OK") {
                 viewModel.clearError()

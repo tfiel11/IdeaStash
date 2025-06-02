@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D17D957A2DEE090700A30BE9 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17D95792DEE090700A30BE9 /* WidgetKit.framework */; };
+		D17D957C2DEE090700A30BE9 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17D957B2DEE090700A30BE9 /* SwiftUI.framework */; };
+		D17D95852DEE090800A30BE9 /* IdeaStashWatchCompExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D17D95772DEE090700A30BE9 /* IdeaStashWatchCompExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D1B7F86A2DE91F1800CD35C2 /* IdeaStash Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D1B7F8692DE91F1800CD35C2 /* IdeaStash Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D17D95832DEE090800A30BE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B7F83E2DE91F1700CD35C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D17D95762DEE090700A30BE9;
+			remoteInfo = IdeaStashWatchCompExtension;
+		};
 		D1B7F8542DE91F1800CD35C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D1B7F83E2DE91F1700CD35C2 /* Project object */;
@@ -49,6 +59,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D17D958A2DEE090800A30BE9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D17D95852DEE090800A30BE9 /* IdeaStashWatchCompExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1B7F88F2DE91F1900CD35C2 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +84,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D17D95772DEE090700A30BE9 /* IdeaStashWatchCompExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IdeaStashWatchCompExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D17D95792DEE090700A30BE9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		D17D957B2DEE090700A30BE9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		D1B7F8462DE91F1700CD35C2 /* IdeaStash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdeaStash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B7F8532DE91F1800CD35C2 /* IdeaStashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdeaStashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B7F85D2DE91F1800CD35C2 /* IdeaStashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdeaStashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +95,32 @@
 		D1B7F8822DE91F1900CD35C2 /* IdeaStash Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IdeaStash Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D17D95722DEE072100A30BE9 /* Exceptions for "IdeaStash Watch App" folder in "IdeaStash Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"IdeaStash-Watch-App-Info.plist",
+			);
+			target = D1B7F8682DE91F1800CD35C2 /* IdeaStash Watch App */;
+		};
+		D17D95892DEE090800A30BE9 /* Exceptions for "IdeaStashWatchComp" folder in "IdeaStashWatchCompExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D17D95762DEE090700A30BE9 /* IdeaStashWatchCompExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		D17D957D2DEE090700A30BE9 /* IdeaStashWatchComp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D17D95892DEE090800A30BE9 /* Exceptions for "IdeaStashWatchComp" folder in "IdeaStashWatchCompExtension" target */,
+			);
+			path = IdeaStashWatchComp;
+			sourceTree = "<group>";
+		};
 		D1B7F8482DE91F1700CD35C2 /* IdeaStash */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = IdeaStash;
@@ -89,6 +138,9 @@
 		};
 		D1B7F86D2DE91F1800CD35C2 /* IdeaStash Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D17D95722DEE072100A30BE9 /* Exceptions for "IdeaStash Watch App" folder in "IdeaStash Watch App" target */,
+			);
 			path = "IdeaStash Watch App";
 			sourceTree = "<group>";
 		};
@@ -105,6 +157,15 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D17D95742DEE090700A30BE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D17D957C2DEE090700A30BE9 /* SwiftUI.framework in Frameworks */,
+				D17D957A2DEE090700A30BE9 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1B7F8432DE91F1700CD35C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,6 +211,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D17D95782DEE090700A30BE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D17D95792DEE090700A30BE9 /* WidgetKit.framework */,
+				D17D957B2DEE090700A30BE9 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D1B7F83D2DE91F1700CD35C2 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +229,8 @@
 				D1B7F86D2DE91F1800CD35C2 /* IdeaStash Watch App */,
 				D1B7F87B2DE91F1900CD35C2 /* IdeaStash Watch AppTests */,
 				D1B7F8852DE91F1900CD35C2 /* IdeaStash Watch AppUITests */,
+				D17D957D2DEE090700A30BE9 /* IdeaStashWatchComp */,
+				D17D95782DEE090700A30BE9 /* Frameworks */,
 				D1B7F8472DE91F1700CD35C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -172,6 +244,7 @@
 				D1B7F8692DE91F1800CD35C2 /* IdeaStash Watch App.app */,
 				D1B7F8782DE91F1900CD35C2 /* IdeaStash Watch AppTests.xctest */,
 				D1B7F8822DE91F1900CD35C2 /* IdeaStash Watch AppUITests.xctest */,
+				D17D95772DEE090700A30BE9 /* IdeaStashWatchCompExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +252,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D17D95762DEE090700A30BE9 /* IdeaStashWatchCompExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D17D95862DEE090800A30BE9 /* Build configuration list for PBXNativeTarget "IdeaStashWatchCompExtension" */;
+			buildPhases = (
+				D17D95732DEE090700A30BE9 /* Sources */,
+				D17D95742DEE090700A30BE9 /* Frameworks */,
+				D17D95752DEE090700A30BE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D17D957D2DEE090700A30BE9 /* IdeaStashWatchComp */,
+			);
+			name = IdeaStashWatchCompExtension;
+			packageProductDependencies = (
+			);
+			productName = IdeaStashWatchCompExtension;
+			productReference = D17D95772DEE090700A30BE9 /* IdeaStashWatchCompExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D1B7F8452DE91F1700CD35C2 /* IdeaStash */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1B7F8902DE91F1900CD35C2 /* Build configuration list for PBXNativeTarget "IdeaStash" */;
@@ -256,10 +351,12 @@
 				D1B7F8652DE91F1800CD35C2 /* Sources */,
 				D1B7F8662DE91F1800CD35C2 /* Frameworks */,
 				D1B7F8672DE91F1800CD35C2 /* Resources */,
+				D17D958A2DEE090800A30BE9 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D17D95842DEE090800A30BE9 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				D1B7F86D2DE91F1800CD35C2 /* IdeaStash Watch App */,
@@ -327,6 +424,9 @@
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
+					D17D95762DEE090700A30BE9 = {
+						CreatedOnToolsVersion = 16.3;
+					};
 					D1B7F8452DE91F1700CD35C2 = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -371,11 +471,19 @@
 				D1B7F8682DE91F1800CD35C2 /* IdeaStash Watch App */,
 				D1B7F8772DE91F1900CD35C2 /* IdeaStash Watch AppTests */,
 				D1B7F8812DE91F1900CD35C2 /* IdeaStash Watch AppUITests */,
+				D17D95762DEE090700A30BE9 /* IdeaStashWatchCompExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D17D95752DEE090700A30BE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1B7F8442DE91F1700CD35C2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,6 +529,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D17D95732DEE090700A30BE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1B7F8422DE91F1700CD35C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -466,6 +581,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D17D95842DEE090800A30BE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D17D95762DEE090700A30BE9 /* IdeaStashWatchCompExtension */;
+			targetProxy = D17D95832DEE090800A30BE9 /* PBXContainerItemProxy */;
+		};
 		D1B7F8552DE91F1800CD35C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D1B7F8452DE91F1700CD35C2 /* IdeaStash */;
@@ -494,6 +614,67 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		D17D95872DEE090800A30BE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IdeaStashWatchComp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = IdeaStashWatchComp;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfiel11.IdeaStash.watchkitapp.IdeaStashWatchComp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		D17D95882DEE090800A30BE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IdeaStashWatchComp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = IdeaStashWatchComp;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfiel11.IdeaStash.watchkitapp.IdeaStashWatchComp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Release;
+		};
 		D1B7F88A2DE91F1900CD35C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -620,6 +801,7 @@
 				DEVELOPMENT_TEAM = WM7SKJ8A72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "IdeaStash-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = IdeaStash;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone Needed to Record Idea";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -650,6 +832,7 @@
 				DEVELOPMENT_TEAM = WM7SKJ8A72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "IdeaStash-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = IdeaStash;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone Needed to Record Idea";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -897,6 +1080,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D17D95862DEE090800A30BE9 /* Build configuration list for PBXNativeTarget "IdeaStashWatchCompExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D17D95872DEE090800A30BE9 /* Debug */,
+				D17D95882DEE090800A30BE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D1B7F8412DE91F1700CD35C2 /* Build configuration list for PBXProject "IdeaStash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
