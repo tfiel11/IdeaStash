@@ -96,13 +96,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D17D95722DEE072100A30BE9 /* Exceptions for "IdeaStash Watch App" folder in "IdeaStash Watch App" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"IdeaStash-Watch-App-Info.plist",
-			);
-			target = D1B7F8682DE91F1800CD35C2 /* IdeaStash Watch App */;
-		};
 		D17D95892DEE090800A30BE9 /* Exceptions for "IdeaStashWatchComp" folder in "IdeaStashWatchCompExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -138,9 +131,6 @@
 		};
 		D1B7F86D2DE91F1800CD35C2 /* IdeaStash Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				D17D95722DEE072100A30BE9 /* Exceptions for "IdeaStash Watch App" folder in "IdeaStash Watch App" target */,
-			);
 			path = "IdeaStash Watch App";
 			sourceTree = "<group>";
 		};
@@ -865,6 +855,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = IdeaStash;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone required to record idea";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Needed to transcribe idea to text";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -896,6 +888,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = IdeaStash;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone required to record idea";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Needed to transcribe idea to text";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
