@@ -35,6 +35,11 @@ struct ContentView: View {
             }
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    // Debug button (for development)
+                    Button("Debug") {
+                        viewModel.debugAllIdeas()
+                    }
+                    
                     // Transcribe button - only show if there are untranscribed ideas
                     if viewModel.hasUntranscribedIdeas() {
                         Button {

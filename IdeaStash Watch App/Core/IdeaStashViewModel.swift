@@ -16,6 +16,7 @@ class IdeaStashViewModel: ObservableObject {
     // MARK: - Dependencies
     private let audioRecorder = AudioRecorder()
     private let storageManager = StorageManager.shared
+    let connectivityManager = WatchConnectivityManager.shared
     
     init() {
         setupBindings()
@@ -88,6 +89,12 @@ class IdeaStashViewModel: ObservableObject {
         }
     }
     
+    func syncWithPhone() {
+        Task {
+            await connectivityManager.syncAllUnsyncedIdeas()
+        }
+    }
+    
     func clearError() {
         errorMessage = nil
     }
@@ -101,7 +108,11 @@ class IdeaStashViewModel: ObservableObject {
     private func stopRecording() async throws {
         clearError()
         let idea = try await audioRecorder.stopRecording()
-        // Storage is handled automatically by the AudioRecorder
+        
+        // Attempt immediate sync if phone is reachable
+        if connectivityManager.isReachable {
+            await connectivityManager.syncIdea(idea)
+        }
     }
     
     // MARK: - Computed Properties
@@ -138,5 +149,38 @@ class IdeaStashViewModel: ObservableObject {
         case .processing:
             return Color(red: 212/255, green: 200/255, blue: 154/255) // #D4C89A - Warm amber
         }
+    }
+    
+    // MARK: - Connectivity Status
+    var connectivityStatusText: String {
+        if connectivityManager.isSyncing {
+            return "Syncing..."
+        } else if connectivityManager.isReachable {
+            return "Connected"
+        } else if connectivityManager.isConnected {
+            return "Phone paired"
+        } else {
+            return "Not connected"
+        }
+    }
+    
+    var connectivityStatusColor: Color {
+        if connectivityManager.isSyncing {
+            return .orange
+        } else if connectivityManager.isReachable {
+            return .green
+        } else if connectivityManager.isConnected {
+            return .yellow
+        } else {
+            return .red
+        }
+    }
+    
+    var unsyncedIdeasCount: Int {
+        ideas.filter { idea in
+            // Check if transcription contains placeholder text indicating unsynced
+            idea.transcription?.contains("Transcription will be processed when the app syncs") == true ||
+            idea.transcription?.contains("Transcription will be available when synced") == true
+        }.count
     }
 } 

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WatchKit
 
 struct ContentView: View {
     @StateObject private var viewModel = IdeaStashViewModel()
@@ -13,40 +14,56 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(spacing: 0) {
-                    // Recording Section - Full Screen Priority
-                    VStack {
+                VStack(spacing: 16) {
+                    // Connectivity Status at top
+                    HStack {
+                        Circle()
+                            .fill(viewModel.connectivityStatusColor)
+                            .frame(width: 8, height: 8)
+                        Text(viewModel.connectivityStatusText)
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
                         Spacer()
-                        RecordingButton(viewModel: viewModel)
-                        Spacer()
-                    }
-                    .frame(minHeight: WKInterfaceDevice.current().screenBounds.height - 40) // Account for smaller navigation
-                    
-                    // Recent Ideas Section - Only show when not recording
-                    if viewModel.recordingState != .recording && !viewModel.ideas.isEmpty {
-                        VStack(spacing: 16) {
-                            // Visual separator
-                            HStack {
-                                VStack {
-                                    Divider()
-                                }
-                                Image(systemName: "chevron.up")
-                                    .font(.caption2)
-                                    .foregroundColor(.secondary)
-                                VStack {
-                                    Divider()
-                                }
-                            }
-                            .padding(.horizontal)
-                            
-                            RecentIdeasSection(ideas: Array(viewModel.ideas.prefix(5)), viewModel: viewModel)
+                        if viewModel.unsyncedIdeasCount > 0 {
+                            Text("\(viewModel.unsyncedIdeasCount) unsynced")
+                                .font(.caption2)
+                                .foregroundColor(.orange)
                         }
-                        .padding(.bottom, 20)
+                    }
+                    .padding(.horizontal)
+                    
+                    // Recording Button - Main interface
+                    RecordingButton(viewModel: viewModel)
+                        .padding(.horizontal)
+                    
+                    // Sync button when there are unsynced ideas
+                    if viewModel.unsyncedIdeasCount > 0 && viewModel.connectivityManager.isReachable {
+                        Button(action: {
+                            viewModel.syncWithPhone()
+                        }) {
+                            HStack {
+                                Image(systemName: "arrow.triangle.2.circlepath")
+                                Text("Sync Now")
+                            }
+                            .font(.caption)
+                            .foregroundColor(.blue)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                    
+                    // Ideas List
+                    if !viewModel.ideas.isEmpty {
+                        LazyVStack(spacing: 12) {
+                            ForEach(viewModel.ideas) { idea in
+                                IdeaRowView(idea: idea, viewModel: viewModel)
+                            }
+                        }
+                        .padding(.horizontal)
                     }
                 }
             }
-            .scrollDisabled(viewModel.recordingState == .recording) // Disable scrolling when recording
-            .navigationBarHidden(false) // Keep navigation bar visible for consistent layout
+            .navigationTitle("IdeaStash")
+            .navigationBarTitleDisplayMode(.inline)
         }
         .onReceive(NotificationCenter.default.publisher(for: .startRecordingFromComplication)) { _ in
             // Handle complication tap - start recording if not already recording
@@ -139,8 +156,8 @@ struct RecordingButton: View {
     }
     
     private func startBreathingAnimation() {
-        withAnimation(.easeInOut(duration: 1.2).repeatForever(autoreverses: true)) {
-            animationAmount = 1.15
+        withAnimation(.easeInOut(duration: 1.0).repeatForever(autoreverses: true)) {
+            animationAmount = 1.1
         }
     }
     
@@ -151,77 +168,57 @@ struct RecordingButton: View {
     }
 }
 
-// MARK: - Recent Ideas Section Component
-struct RecentIdeasSection: View {
-    let ideas: [Idea]
-    let viewModel: IdeaStashViewModel
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            // Section Header
-            HStack {
-                Text("Recent Ideas")
-                    .font(.headline)
-                    .foregroundColor(.primary)
-                Spacer()
-            }
-            .padding(.horizontal)
-            
-            // Ideas List
-            ForEach(ideas) { idea in
-                RecentIdeaRow(idea: idea, onDelete: {
-                    viewModel.deleteIdea(idea)
-                })
-                .padding(.horizontal)
-            }
-        }
-    }
-}
-
-// MARK: - Recent Idea Row Component
-struct RecentIdeaRow: View {
+// MARK: - Idea Row Component
+struct IdeaRowView: View {
     let idea: Idea
-    let onDelete: () -> Void
+    @ObservedObject var viewModel: IdeaStashViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            // Header with audio icon and timestamp
             HStack {
-                Image(systemName: "waveform")
-                    .font(.caption)
-                    .foregroundColor(.blue)
+                VStack(alignment: .leading, spacing: 4) {
+                    // Duration and timestamp
+                    HStack {
+                        Text(idea.duration.formattedDuration)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                        
+                        Spacer()
+                        
+                        Text(idea.timestamp.relativeTimeString)
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    // Transcription or placeholder
+                    if let transcription = idea.transcription, !transcription.isEmpty {
+                        Text(transcription)
+                            .font(.caption)
+                            .foregroundColor(.primary)
+                            .lineLimit(3)
+                    } else {
+                        Text("No transcription")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                            .italic()
+                    }
+                }
                 
-                Text(idea.timestamp.relativeTimeString)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                
-                Spacer()
-                
-                Text(idea.duration.formattedDuration)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
-            
-            // Transcription Preview
-            if let transcription = idea.transcription {
-                Text(transcription)
-                    .font(.caption)
-                    .lineLimit(3)
-                    .foregroundColor(.primary)
-            } else {
-                Text("Voice Recording")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                    .italic()
+                // Delete button
+                Button(action: {
+                    viewModel.deleteIdea(idea)
+                }) {
+                    Image(systemName: "trash")
+                        .font(.caption)
+                        .foregroundColor(.red)
+                }
+                .buttonStyle(PlainButtonStyle())
             }
         }
-        .padding(12)
-        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 10))
-        .contextMenu {
-            Button("Delete", role: .destructive) {
-                onDelete()
-            }
-        }
+        .padding(.vertical, 8)
+        .padding(.horizontal, 12)
+        .background(Color.gray.opacity(0.2))
+        .cornerRadius(8)
     }
 }
 

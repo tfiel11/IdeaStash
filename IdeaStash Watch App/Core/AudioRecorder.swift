@@ -88,7 +88,7 @@ class AudioRecorder: NSObject, ObservableObject {
         stopRecordingTimer()
         
         // Create placeholder transcription message
-        let placeholderTranscription = "Audio recorded successfully. Transcription will be processed when the app syncs with your iPhone."
+        let placeholderTranscription = "Audio Dumb recorded successfully. Transcription will be processed when the app syncs with your iPhone."
         
         // Create and save idea
         let idea = Idea(

@@ -10,8 +10,9 @@ import UserNotifications
 
 @main
 struct IdeaStashApp: App {
-    // Initialize storage manager to set up Core Data
-    @StateObject private var storageManager = StorageManager.shared
+    // Initialize core services at app launch
+    let storageManager = StorageManager.shared
+    let connectivityManager = PhoneConnectivityManager.shared
     
     var body: some Scene {
         WindowGroup {

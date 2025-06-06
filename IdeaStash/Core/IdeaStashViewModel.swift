@@ -17,6 +17,7 @@ class IdeaStashViewModel: ObservableObject {
     private let storageManager = StorageManager.shared
     private let transcriptionService = TranscriptionService.shared
     private let audioPlayer = AudioPlayer.shared
+    private let connectivityManager = PhoneConnectivityManager.shared
     
     // MARK: - Combine
     private var cancellables = Set<AnyCancellable>()
@@ -35,6 +36,17 @@ class IdeaStashViewModel: ObservableObject {
         
         transcriptionService.$transcriptionProgress
             .assign(to: \.transcriptionProgress, on: self)
+            .store(in: &cancellables)
+        
+        // Listen for connectivity manager refresh signals
+        connectivityManager.$shouldRefreshIdeas
+            .dropFirst() // Skip initial value
+            .sink { [weak self] _ in
+                Task { @MainActor in
+                    print("🔄 Refreshing ideas due to connectivity update...")
+                    self?.loadIdeas()
+                }
+            }
             .store(in: &cancellables)
     }
     
@@ -93,22 +105,46 @@ class IdeaStashViewModel: ObservableObject {
     func togglePlayback(for idea: IdeaEntity) {
         Task {
             do {
-                if let audioURLString = idea.value(forKey: "audioURL") as? String,
+                // Debug: Check what audio data we have for this idea
+                print("🎵 Attempting to play audio for idea: \(idea.id?.uuidString ?? "unknown")")
+                print("   - audioURL: \(idea.audioURL ?? "nil")")
+                print("   - audioFileName: \(idea.audioFileName ?? "nil")")
+                print("   - audioData size: \(idea.audioData?.count ?? 0) bytes")
+                print("   - transcription: \(idea.transcription ?? "nil")")
+                print("   - duration: \(idea.duration)")
+                print("   - isSynced: \(idea.isSynced)")
+                
+                // Try audioURL first (preferred for watch-synced ideas)
+                if let audioURLString = idea.audioURL,
                    let audioURL = URL(string: audioURLString) {
-                    try await audioPlayer.togglePlayback(for: audioURL)
+                    print("   - Playing from URL: \(audioURL.path)")
+                    
+                    // Check if file exists
+                    let fileExists = FileManager.default.fileExists(atPath: audioURL.path)
+                    print("   - File exists: \(fileExists)")
+                    
+                    if fileExists {
+                        try await audioPlayer.togglePlayback(for: audioURL)
+                    } else {
+                        print("   - ❌ Audio file not found at path: \(audioURL.path)")
+                        errorMessage = "Audio file not found. It may have been moved or deleted."
+                    }
                 } else if let audioData = idea.audioData {
+                    print("   - Playing from audioData (\(audioData.count) bytes)")
                     try await audioPlayer.togglePlayback(for: audioData)
                 } else {
+                    print("   - ❌ No audio data available")
                     errorMessage = "No audio data available for this idea"
                 }
             } catch {
+                print("   - ❌ Audio playback failed: \(error)")
                 errorMessage = "Audio playback failed: \(error.localizedDescription)"
             }
         }
     }
     
     func isPlayingAudio(for idea: IdeaEntity) -> Bool {
-        if let audioURLString = idea.value(forKey: "audioURL") as? String,
+        if let audioURLString = idea.audioURL,
            let audioURL = URL(string: audioURLString) {
             return audioPlayer.isPlayingAudio(at: audioURL)
         }
@@ -202,5 +238,21 @@ class IdeaStashViewModel: ObservableObject {
         return ideas.filter { idea in
             idea.transcription == nil || idea.transcription?.contains("Recording audio...") == true
         }.count
+    }
+    
+    // MARK: - Debug Methods
+    func debugAllIdeas() {
+        print("\n🔍 DEBUG: All Ideas Data:")
+        for (index, idea) in ideas.enumerated() {
+            print("--- Idea \(index + 1) ---")
+            print("ID: \(idea.id?.uuidString ?? "nil")")
+            print("Transcription: \(idea.transcription ?? "nil")")
+            print("AudioURL: \(idea.audioURL ?? "nil")")
+            print("AudioData: \(idea.audioData?.count ?? 0) bytes")
+            print("Duration: \(idea.duration)")
+            print("IsSynced: \(idea.isSynced)")
+            print("Timestamp: \(idea.timestamp?.description ?? "nil")")
+            print("")
+        }
     }
 } 

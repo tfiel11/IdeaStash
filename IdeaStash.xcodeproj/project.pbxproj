@@ -103,6 +103,13 @@
 			);
 			target = D17D95762DEE090700A30BE9 /* IdeaStashWatchCompExtension */;
 		};
+		D17D96A62DF0B39A00A30BE9 /* Exceptions for "IdeaStash" folder in "IdeaStash" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D1B7F8452DE91F1700CD35C2 /* IdeaStash */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -116,6 +123,9 @@
 		};
 		D1B7F8482DE91F1700CD35C2 /* IdeaStash */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D17D96A62DF0B39A00A30BE9 /* Exceptions for "IdeaStash" folder in "IdeaStash" target */,
+			);
 			path = IdeaStash;
 			sourceTree = "<group>";
 		};
@@ -849,11 +859,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IdeaStash/IdeaStash.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WM7SKJ8A72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IdeaStash/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = IdeaStash;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone required to record idea";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Needed to transcribe idea to text";
@@ -882,11 +894,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IdeaStash/IdeaStash.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WM7SKJ8A72;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IdeaStash/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = IdeaStash;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone required to record idea";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Needed to transcribe idea to text";

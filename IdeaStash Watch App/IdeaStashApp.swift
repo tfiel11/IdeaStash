@@ -11,8 +11,9 @@ import WidgetKit
 @main
 struct IdeaStash_Watch_AppApp: App {
     
-    // Initialize the storage manager at app launch
+    // Initialize the storage manager and connectivity at app launch
     let storageManager = StorageManager.shared
+    let connectivityManager = WatchConnectivityManager.shared
     
     var body: some Scene {
         WindowGroup {

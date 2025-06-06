@@ -11,19 +11,22 @@ enum RecordingState {
 
 // MARK: - Legacy Idea struct (for compatibility)
 struct Idea: Identifiable, Codable {
-    let id = UUID()
+    let id: UUID
     let timestamp: Date
     let audioURL: URL?
     let transcription: String?
     let duration: TimeInterval
     let isRecording: Bool
+    let isSynced: Bool
     
-    init(timestamp: Date = Date(), audioURL: URL? = nil, transcription: String? = nil, duration: TimeInterval = 0, isRecording: Bool = false) {
+    init(id: UUID = UUID(), timestamp: Date = Date(), audioURL: URL? = nil, transcription: String? = nil, duration: TimeInterval = 0, isRecording: Bool = false, isSynced: Bool = false) {
+        self.id = id
         self.timestamp = timestamp
         self.audioURL = audioURL
         self.transcription = transcription
         self.duration = duration
         self.isRecording = isRecording
+        self.isSynced = isSynced
     }
 }
 

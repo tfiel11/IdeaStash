@@ -7,17 +7,45 @@
 		<key>IdeaStash Watch App.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>IdeaStash.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>IdeaStashWatchCompExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D17D95762DEE090700A30BE9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1B7F8452DE91F1700CD35C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1B7F8522DE91F1800CD35C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1B7F85C2DE91F1800CD35C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1B7F8682DE91F1800CD35C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
